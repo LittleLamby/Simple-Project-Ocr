@@ -19,10 +19,11 @@
   crossorigin="anonymous"></script>
 
 <script type="text/javascript">
-  var ladate=new Date();
+
 $( document ).ready(function() {
-   
-$('#today').append(ladate.getDate()+"/"+(ladate.getMonth()+1)+"/"+ladate.getFullYear());
+     var dToday=new Date();
+   var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+$('#today').append(dToday.toLocaleDateString('fr-FR', options));
 
 });
 </script>
