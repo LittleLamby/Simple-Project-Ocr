@@ -12,18 +12,26 @@
 
     <!-- Custom styles for this template -->
     <link href="./css/site.css" rel="stylesheet">
-<!--
+	
+	<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
 <script type="text/javascript">
   var ladate=new Date();
-document.write("Aujourd'hui, nous sommes le : ");
-document.write(ladate.getDate()+"/"+(ladate.getMonth()+1)+"/"+ladate.getFullYear());
-</script>-->
+$( document ).ready(function() {
+   
+$('#today').append(ladate.getDate()+"/"+(ladate.getMonth()+1)+"/"+ladate.getFullYear());
+
+});
+</script>
   </head>
   <body>
  <!-- Begin page content -->
     <main role="main" class="container">
       <h1 class="mt-5">Bienvenue</h1>
-      <p class="lead">Ajourd'hui nous sommes le ???.</p>
+      <p class="lead">Ajourd'hui nous sommes le <span id="today"><!-- --></span>.</p>
       <p>Bonne journée à tous.</p>
     </main>
 
